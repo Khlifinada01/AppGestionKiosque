@@ -1,0 +1,36 @@
+<h4> voila la liste des stations à consulter : </h4>
+<div *ngIf="station==null" class="spinner-border" role="status"  >
+  <span class="sr-only">Loading...</span>
+</div>
+<div  class="container " *ngIf="station!=null">
+  <table class="table">
+  <div   *ngFor=" let s  of station" >
+     <table class="table">
+      <tr>
+        <th> id</th>
+        <th>nom</th>
+        <th>date_ouver</th>
+        <th>localisation</th>
+        <th>numtel</th>
+        <th> owner</th>
+        </tr>
+     </table>
+        <td>
+          {{s.id}}
+        </td>
+        <td>
+          {{s.nom}}
+        </td>
+        <td>
+          {{s.date_ouver}}
+        </td><td>
+        {{s.localisation}}
+      </td>
+    <td>{{s.numtel}}
+        {{s.owner}}
+      </td>
+
+  </div>
+  </table>
+</div>
+
